@@ -2,10 +2,7 @@ package collections;
 
 import genrics.ArrayLists;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Hashmap {
     static void main() {
@@ -43,7 +40,43 @@ public class Hashmap {
 
         StringBuilder sb2 = new StringBuilder("Hello");
 
-        System.out.println(sb1 == sb2);
-        System.out.println(sb1.equals(sb2));
+//        System.out.println(sb1 == sb2);
+//        System.out.println(sb1.equals(sb2));
+
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("Apple", 10);
+        map.put("Orange", 20);
+        map.put("Jackfruit", 30);
+
+//        System.out.println(map);
+
+//        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+//            String key = entry.getKey();
+//            Integer value = entry.getValue();
+//
+//            System.out.println("Key: " + key + " Value: " + value);
+//        }
+
+        String s = "abbac";
+
+//        System.out.println(s.toCharArray());
+
+//        HashMap<String, Integer> freq = new HashMap<>();
+//        for (Map.Entry<String, Integer> entry : freq.entrySet()) {
+//
+//        }
+
+        PriorityQueue<String> a = new PriorityQueue<>(Comparator.reverseOrder());
+        a.add("a");
+        a.add("c");
+        a.add("e");
+        a.add("a");
+//        a.add(null);
+
+        a.remove();
+
+        System.out.println(a);
+
+
     }
 }

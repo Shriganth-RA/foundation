@@ -1,13 +1,14 @@
-package tasks;
+package collections.linkedHashMap;
 
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.LinkedHashMap;
 
 public class DuplicateElements {
-    public static void main(String[] args) {
+    static void main() {
+
         String s = "abcadbefgc";
 
-        HashMap<Character, Integer> frequency = new HashMap<>();
+        LinkedHashMap<Character, Integer> frequency = new LinkedHashMap<>();
 
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
@@ -37,5 +38,6 @@ public class DuplicateElements {
             System.out.print(s.charAt(i));
             break;
         }
+
     }
 }
