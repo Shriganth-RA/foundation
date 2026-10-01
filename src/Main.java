@@ -1,11 +1,30 @@
-import java.util.concurrent.atomic.AtomicLongArray;
+
+
+class Employee implements Cloneable {
+    String name;
+    int age;
+    Address address;
+
+    public Employee(String name, int age, Address address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+
+    @Override
+    public Employee clone() throws CloneNotSupportedException {
+        Employee copy = (Employee) super.clone();
+        copy.address = address.clone();
+        return copy;
+    }
+}
+
 
 class Address implements Cloneable {
     String city;
-    String pinCode;
-    public Address(String city, String pinCode) {
+
+    public Address(String city) {
         this.city = city;
-        this.pinCode = pinCode;
     }
 
     @Override
@@ -14,33 +33,19 @@ class Address implements Cloneable {
     }
 }
 
-class Employee implements Cloneable {
-    String name;
-    double salary;
-    Address a;
-    public Employee(String name, double salary, Address a) {
-        this.name = name;
-        this.salary = salary;
-        this.a = a;
-    }
-
-    @Override
-    public Employee clone() throws CloneNotSupportedException {
-        Employee copy = (Employee) super.clone();
-        copy.a = a.clone();
-        return copy;
-    }
-}
 
 public class Main {
     static void main() throws CloneNotSupportedException {
-        Employee e1 = new Employee("Kavin", 200000, new Address("Chennai", "6000017"));
+        Address address = new Address("Chennai");
+        Employee e1 = new Employee("Shriganth", 24, address);
         Employee e2 = e1.clone();
 
-        e1.name = "Noorul";
+        System.out.println("Name: " + e1.name
+                            + "\nAge: " + e1.age
+                            + "\nCity: " + e1.address.city);
 
-        System.out.println(e1.name);
-        System.out.println(e2.name);
-
+        System.out.println("Name: " + e2.name
+                            + "\nAge: " + e2.age
+                            + "\nCity: " + e2.address.city);
     }
 }
