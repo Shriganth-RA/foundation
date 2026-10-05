@@ -1,12 +1,12 @@
 package DSA;
 
-public class QueueUsingStack {
+public class QueueandStack {
     int size;
     int[] queueStack;
     int front;
     int rear;
 
-    public QueueUsingStack(int size) {
+    public QueueandStack(int size) {
         this.size = size;
         queueStack = new int[size];
         front = -1;
@@ -66,7 +66,7 @@ public class QueueUsingStack {
     }
 
     static void main() {
-        QueueUsingStack qus = new QueueUsingStack(5);
+        QueueandStack qus = new QueueandStack(5);
         qus.enQueue(10);
         qus.enQueue(20);
         qus.enQueue(30);
