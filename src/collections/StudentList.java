@@ -1,6 +1,7 @@
 package collections;
 
 import java.util.Comparator;
+import java.util.PriorityQueue;
 import java.util.TreeSet;
 
 class Student {
@@ -34,15 +35,26 @@ class CompareStudentByPercentage implements Comparator<Student> {
 
 public class StudentList {
     static void main() {
-        CompareStudentByPercentage csp = new CompareStudentByPercentage();
-        TreeSet<Student> studentTreeSet = new TreeSet<>(csp);
+//        CompareStudentByPercentage csp = new CompareStudentByPercentage();
+//        TreeSet<Student> studentTreeSet = new TreeSet<>(csp);
+//
+//        studentTreeSet.add(new Student(104, "S", 65));
+//        studentTreeSet.add(new Student(102, "O", 87));
+//        studentTreeSet.add(new Student(106, "J", 45));
+//        studentTreeSet.add(new Student(103, "T", 28));
+//        studentTreeSet.add(new Student(101, "Y", 53));
+//
+//        System.out.println(studentTreeSet);
 
-        studentTreeSet.add(new Student(104, "S", 65));
-        studentTreeSet.add(new Student(102, "O", 87));
-        studentTreeSet.add(new Student(106, "J", 45));
-        studentTreeSet.add(new Student(103, "T", 28));
-        studentTreeSet.add(new Student(101, "Y", 53));
+        PriorityQueue<String> alphabets = new PriorityQueue<>();
 
-        System.out.println(studentTreeSet);
+        alphabets.add("V");
+        alphabets.add("C");
+        alphabets.add("L");
+        alphabets.add("I");
+        alphabets.add("D");
+        alphabets.add("F");
+
+        System.out.println(alphabets);
     }
 }
