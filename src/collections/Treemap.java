@@ -1,5 +1,7 @@
 package collections;
 
+import java.util.Iterator;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class Treemap {
@@ -33,6 +35,9 @@ public class Treemap {
 
 //        System.out.println(treeMap.subMap("B", "S"));
 
-        System.out.println(treeMap.comparator());
+//        System.out.println(treeMap.comparator());
+
+        Set<String> keySet = treeMap.keySet();
+//        Iterator<>
     }
 }
